@@ -16,9 +16,9 @@ export class WeatherComponent implements OnInit {
   }
 
   getWeathers(){
-    this.http.get('http://localhost:5000/WeatherForecast').subscribe(Response => {
-      this.weathers = Response;
-    }, error =>{
+    this.http.get('http://localhost:5000/WeatherForecast').subscribe(response => {
+      this.weathers = response;
+    }, error => {
       console.log(error);
     });
   }
