@@ -4,21 +4,23 @@ import { HttpClientModule } from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { WeatherComponent } from './weather/weather.component';
 import { from } from 'rxjs';
 import { NavComponent } from './nav/nav.component';
 import { AuthService } from './_services/auth.service';
+import { HomeComponent } from './home/home.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
    declarations: [
       AppComponent,
-      WeatherComponent,
-      NavComponent
+      NavComponent,
+      HomeComponent,
+      RegisterComponent
    ],
    imports: [
       BrowserModule,
       HttpClientModule,
-     FormsModule
+      FormsModule
    ],
    providers: [
       AuthService
