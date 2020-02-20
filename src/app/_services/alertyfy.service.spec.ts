@@ -1,16 +1,16 @@
-/* tslint:disable:no-unused-variable */
+
 
 import { TestBed, async, inject } from '@angular/core/testing';
-import { AlertyfyService } from './alertyfy.service';
+import { AlertifyService } from './alertify.service';
 
 describe('Service: Alertyfy', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [AlertyfyService]
+      providers: [AlertifyService]
     });
   });
 
-  it('should ...', inject([AlertyfyService], (service: AlertyfyService) => {
+  it('should ...', inject([AlertifyService], (service: AlertifyService) => {
     expect(service).toBeTruthy();
   }));
 });
