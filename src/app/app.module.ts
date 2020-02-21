@@ -19,7 +19,13 @@ import { MessagesComponent } from './messages/messages.component';
 import { appRoutes } from './routes';
 import { AuthGuard } from './_guards/auth.guard';
 import { UserService } from './_services/user.service';
-import { MemberCardComponent } from './members/member-list/member-card/member-card.component';
+import { MemberCardComponent } from './members/member-card/member-card.component';
+import { JwtModule } from '@auth0/angular-jwt';
+import { MemberDetailComponent } from './members/member-detail/member-detail.component';
+
+export function tokenGetter() {
+   return localStorage.getItem('token')
+}
 
 @NgModule({
    declarations: [
@@ -31,7 +37,8 @@ import { MemberCardComponent } from './members/member-list/member-card/member-ca
       ListsComponent,
       MessagesComponent,
       MessagesComponent,
-      MemberCardComponent
+      MemberCardComponent,
+      MemberDetailComponent
    ],
    imports: [
       BrowserModule,
@@ -39,7 +46,14 @@ import { MemberCardComponent } from './members/member-list/member-card/member-ca
       FormsModule,
       BsDropdownModule.forRoot(),
       RouterModule.forRoot(appRoutes),
-      BrowserAnimationsModule
+      BrowserAnimationsModule,
+      JwtModule.forRoot({
+         config: {
+            tokenGetter: tokenGetter,
+            whitelistedDomains: ['localhost:5000'],
+            blacklistedRoutes: ['localhost:5000/api/aith']
+         }
+      })
    ],
    providers: [
       AuthService,
