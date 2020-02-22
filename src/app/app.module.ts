@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { BsDropdownModule, TabsModule } from 'ngx-bootstrap';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-//import { GalleryModule, GALLERY_CONFIG } from '@ngx-gallery/core';
 import { NgxGalleryModule } from 'ngx-gallery';
 
 
@@ -34,12 +33,12 @@ export function tokenGetter() {
    return localStorage.getItem('token');
 }
 
-export class CustomHammerConfig extends HammerGestureConfig  {
-   overrides = {
-       pinch: { enable: false },
-       rotate: { enable: false }
-   };
-}
+// export class CustomHammerConfig extends HammerGestureConfig  {
+//    overrides = {
+//        pinch: { enable: false },
+//        rotate: { enable: false }
+//    };
+// }
 
 @NgModule({
    declarations: [
@@ -62,7 +61,6 @@ export class CustomHammerConfig extends HammerGestureConfig  {
       TabsModule.forRoot(),
       RouterModule.forRoot(appRoutes),
       BrowserAnimationsModule,
-      //GalleryModule,
       NgxGalleryModule,
       JwtModule.forRoot({
          config: {
@@ -80,14 +78,7 @@ export class CustomHammerConfig extends HammerGestureConfig  {
       UserService,
       MemberDetailResolver,
       MemberListResolver,
-      { provide: HAMMER_GESTURE_CONFIG, useClass: CustomHammerConfig },
-      // {
-      //    provide: GALLERY_CONFIG,
-      //    useValue: {
-      //      dots: true,
-      //      imageSize: 'cover'
-      //    }
-      //  }
+   //   { provide: HAMMER_GESTURE_CONFIG, useClass: CustomHammerConfig },
    ],
    bootstrap: [
       AppComponent
