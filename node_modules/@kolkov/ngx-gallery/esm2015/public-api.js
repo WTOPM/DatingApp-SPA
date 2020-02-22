@@ -1,0 +1,20 @@
+/*
+ * Public API Surface of ngx-gallery
+ */
+export * from './lib/ngx-gallery.service';
+export * from './lib/ngx-gallery.component';
+export * from './lib/ngx-gallery.module';
+export * from './lib/ngx-gallery-action';
+export * from './lib/ngx-gallery-image';
+export * from './lib/ngx-gallery-thumbnails/ngx-gallery-thumbnails.component';
+export * from './lib/ngx-gallery-preview/ngx-gallery-preview.component';
+export * from './lib/ngx-gallery-arrows/ngx-gallery-arrows.component';
+export * from './lib/ngx-gallery-bullets/ngx-gallery-bullets.component';
+export * from './lib/ngx-gallery-options';
+export * from './lib/ngx-gallery-image';
+export * from './lib/ngx-gallery-animation';
+export * from './lib/ngx-gallery-image-size';
+export * from './lib/ngx-gallery-layout';
+export * from './lib/ngx-gallery-order';
+export * from './lib/ngx-gallery-ordered-image';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL0Brb2xrb3Yvbmd4LWdhbGxlcnkvIiwic291cmNlcyI6WyJwdWJsaWMtYXBpLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztHQUVHO0FBRUgsY0FBYywyQkFBMkIsQ0FBQztBQUMxQyxjQUFjLDZCQUE2QixDQUFDO0FBQzVDLGNBQWMsMEJBQTBCLENBQUM7QUFDekMsY0FBYywwQkFBMEIsQ0FBQztBQUN6QyxjQUFjLHlCQUF5QixDQUFDO0FBQ3hDLGNBQWMsK0RBQStELENBQUM7QUFDOUUsY0FBYyx5REFBeUQsQ0FBQztBQUN4RSxjQUFjLHVEQUF1RCxDQUFDO0FBQ3RFLGNBQWMseURBQXlELENBQUM7QUFDeEUsY0FBYywyQkFBMkIsQ0FBQztBQUMxQyxjQUFjLHlCQUF5QixDQUFDO0FBQ3hDLGNBQWMsNkJBQTZCLENBQUM7QUFDNUMsY0FBYyw4QkFBOEIsQ0FBQztBQUM3QyxjQUFjLDBCQUEwQixDQUFDO0FBQ3pDLGNBQWMseUJBQXlCLENBQUM7QUFDeEMsY0FBYyxpQ0FBaUMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qXG4gKiBQdWJsaWMgQVBJIFN1cmZhY2Ugb2Ygbmd4LWdhbGxlcnlcbiAqL1xuXG5leHBvcnQgKiBmcm9tICcuL2xpYi9uZ3gtZ2FsbGVyeS5zZXJ2aWNlJztcbmV4cG9ydCAqIGZyb20gJy4vbGliL25neC1nYWxsZXJ5LmNvbXBvbmVudCc7XG5leHBvcnQgKiBmcm9tICcuL2xpYi9uZ3gtZ2FsbGVyeS5tb2R1bGUnO1xuZXhwb3J0ICogZnJvbSAnLi9saWIvbmd4LWdhbGxlcnktYWN0aW9uJztcbmV4cG9ydCAqIGZyb20gJy4vbGliL25neC1nYWxsZXJ5LWltYWdlJztcbmV4cG9ydCAqIGZyb20gJy4vbGliL25neC1nYWxsZXJ5LXRodW1ibmFpbHMvbmd4LWdhbGxlcnktdGh1bWJuYWlscy5jb21wb25lbnQnO1xuZXhwb3J0ICogZnJvbSAnLi9saWIvbmd4LWdhbGxlcnktcHJldmlldy9uZ3gtZ2FsbGVyeS1wcmV2aWV3LmNvbXBvbmVudCc7XG5leHBvcnQgKiBmcm9tICcuL2xpYi9uZ3gtZ2FsbGVyeS1hcnJvd3Mvbmd4LWdhbGxlcnktYXJyb3dzLmNvbXBvbmVudCc7XG5leHBvcnQgKiBmcm9tICcuL2xpYi9uZ3gtZ2FsbGVyeS1idWxsZXRzL25neC1nYWxsZXJ5LWJ1bGxldHMuY29tcG9uZW50JztcbmV4cG9ydCAqIGZyb20gJy4vbGliL25neC1nYWxsZXJ5LW9wdGlvbnMnO1xuZXhwb3J0ICogZnJvbSAnLi9saWIvbmd4LWdhbGxlcnktaW1hZ2UnO1xuZXhwb3J0ICogZnJvbSAnLi9saWIvbmd4LWdhbGxlcnktYW5pbWF0aW9uJztcbmV4cG9ydCAqIGZyb20gJy4vbGliL25neC1nYWxsZXJ5LWltYWdlLXNpemUnO1xuZXhwb3J0ICogZnJvbSAnLi9saWIvbmd4LWdhbGxlcnktbGF5b3V0JztcbmV4cG9ydCAqIGZyb20gJy4vbGliL25neC1nYWxsZXJ5LW9yZGVyJztcbmV4cG9ydCAqIGZyb20gJy4vbGliL25neC1nYWxsZXJ5LW9yZGVyZWQtaW1hZ2UnO1xuIl19
