@@ -26,7 +26,7 @@ import { MemberDetailResolver } from './_resolvers/member-detail.resolver';
 import { MemberListResolver } from './_resolvers/member-list.resolver';
 
 export function tokenGetter() {
-   return localStorage.getItem('token')
+   return localStorage.getItem('token');
 }
 
 @NgModule({
