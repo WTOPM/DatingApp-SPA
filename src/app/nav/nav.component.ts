@@ -13,10 +13,10 @@ export class NavComponent implements OnInit {
   photoUrl: string;
 
   constructor(public authService: AuthService, private alertify: AlertifyService,
-              private router: Router) { }
+      private router: Router) { }
 
   ngOnInit() {
-    this.authService.currentPhotoUrl.subscribe(photoUrl => this.photoUrl = this.photoUrl);
+    this.authService.currentPhotoUrl.subscribe(photoUrl => this.photoUrl = photoUrl);
   }
 
   login() {
