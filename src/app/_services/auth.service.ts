@@ -23,8 +23,8 @@ export class AuthService {
     this.photoUrl.next(photoUrl);
   }
 
-  login(model: any) {
-    return this.http.post(this.baseUrl + 'login', model).pipe(
+  login(user: User) {
+    return this.http.post(this.baseUrl + 'login', user).pipe(
       map((response: any) => {
         const user = response;
         if (user) {
