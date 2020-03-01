@@ -6,12 +6,6 @@ import { User } from '../_models/user';
 import { PaginatedResult } from '../_models/pagination';
 import { map } from 'rxjs/operators';
 
-const httpOptions = {
-  headers: new HttpHeaders({
-    'Authorization': 'Bearer ' + localStorage.getItem('token')
-  })
-};
-
 @Injectable({
   providedIn: 'root'
 })
@@ -29,10 +23,12 @@ export class UserService {
       params = params.append('pageNumber', page);
       params = params.append('pageSize', itemsPerPage);
     }
+
     if (userParams != null) {
       params = params.append('minAge', userParams.minAge);
-      params = params.append('maxnAge', userParams.maxAge);
+      params = params.append('maxAge', userParams.maxAge);
       params = params.append('gender', userParams.gender);
+      params = params.append('orderBy', userParams.orderBy);
     }
 
     return this.http.get<User[]>(this.baseUrl + 'users', { observe: 'response', params})
@@ -40,7 +36,7 @@ export class UserService {
         map(response => {
           paginatedResult.result = response.body;
           if (response.headers.get('Pagination') != null) {
-            paginatedResult.pagination = JSON.parse(response.headers.get('Pagination'));
+            paginatedResult.pagination = JSON.parse(response.headers.get('Pagination'))
           }
           return paginatedResult;
         })
