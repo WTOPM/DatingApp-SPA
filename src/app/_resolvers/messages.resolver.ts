@@ -16,7 +16,7 @@ export class MessagesResolver implements Resolve<Message[]> {
                 private router: Router, private alertify: AlertifyService) {}
 
         resolve(route: ActivatedRouteSnapshot): Observable<Message[]> {
-            return this.userService.getMessages(this.authService.decodedToken.nameId,
+            return this.userService.getMessages(this.authService.decodedToken.nameid,
                 this.pageNumber, this.pageSize, this.messageContainer).pipe(
                 catchError(error => {
                     this.alertify.error('Problem retrieving messages');
