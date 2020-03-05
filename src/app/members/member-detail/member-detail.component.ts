@@ -45,17 +45,19 @@ export class MemberDetailComponent implements OnInit {
 
   getImages() {
     const imageUrls = [];
-    for (const photo of this.user.photos) {
+    for (let i = 0; i < this.user.photos.length; i++) {
       imageUrls.push({
-        small: photo.url,
-        medium: photo.url,
-        big: photo.url,
-        description: photo.description
+        small: this.user.photos[i].url,
+        medium: this.user.photos[i].url,
+        big: this.user.photos[i].url,
+        description: this.user.photos[i].description
       });
     }
     return imageUrls;
   }
+
   selectTab(tabId: number) {
     this.memberTabs.tabs[tabId].active = true;
   }
+
 }
