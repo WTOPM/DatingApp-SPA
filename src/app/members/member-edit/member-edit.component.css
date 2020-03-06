@@ -1,13 +1,15 @@
-img.img-thumbnail {
-  height: 100px;
-  min-width: 100px !important;
-  margin-bottom: 2px;
+.img-thumbnail {
+  margin: 25px;
+  width: 85%;
+  height: 85%;
 }
 
-.nv-file-over {
-  border: dotted 3px red;
+.card-body {
+  padding: 0 25px;
 }
 
-input[type=file] {
-  color: transparent;
+.card-footer {
+  padding: 10px 15px;
+  background-color: #fff;
+  border-top: none;
 }
