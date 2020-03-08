@@ -1,3 +1,6 @@
+<div *ngIf="isLiked" >test 1</div>
+<div *ngIf="!isLiked"> test 2</div>
+
 <div class="card mb-4"> 
   <div class="card-img-wrapper">
     <img class="card-img-top" src="{{user.photoUrl || '../../../../../assets/user.png'}}" alt="{{user.knownAs}}">
@@ -5,11 +8,11 @@
       <li class="list-inline-item"><button class="btn btn-primary"
           [routerLink]="['/members/', user.id]"><i class="fa fa-user"></i></button></li>
           
-          <li *ngIf="!checkLike(user.id)" class="list-inline-item"><button class="btn btn-primary" (click)="sendLike(user.id)">
+          <li *ngIf="!isLiked" class="list-inline-item"><button class="btn btn-primary" (click)="sendLike(user.id)">
         <i class="fa fa-heart"></i></button></li>
 
-        <li *ngIf="checkLike(user.id)" class="list-inline-item"><button class="btn btn-primary" (click)="sendUnlike(user.id)">
-          <i class="fa fa-heart-broken"></i></button></li>
+        <li *ngIf="isLiked" class="list-inline-item"><button class="btn btn-primary" (click)="sendUnlike(user.id)">
+          <i class="fa fa-heartbeat"></i></button></li>
         
       <li class="list-inline-item"><button class="btn btn-primary"
         [routerLink]="['/members/', user.id]" [queryParams]="{tab: 3}"><i class="fa fa-envelope"></i></button></li>

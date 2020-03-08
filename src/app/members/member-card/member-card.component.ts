@@ -12,15 +12,18 @@ import { filter } from 'rxjs/operators';
 })
 export class MemberCardComponent implements OnInit {
   @Input() user: User;
+  isLiked: boolean = false;
 
   constructor(private authService: AuthService,
               private userService: UserService, private alertify: AlertifyService) { }
 
   ngOnInit() {
+    this.isLiked = this.checkLike(this.user.id);
   }
 
 
   sendLike(id: number) {
+    this.isLiked = true;
     this.userService.sendLike(this.authService.decodedToken.nameid, id).subscribe(data => {
       this.alertify.success('You have liked: ' + this.user.knownAs);
     }, error => {
@@ -29,6 +32,7 @@ export class MemberCardComponent implements OnInit {
   }
 
   sendUnlike(id: number) {
+    this.isLiked = false;
     this.userService.sendUnlike(this.authService.decodedToken.nameid, id).subscribe(data => {
       this.alertify.success('You have unliked: ' + this.user.knownAs);
     }, error => {
@@ -36,7 +40,7 @@ export class MemberCardComponent implements OnInit {
     });
   }
 
-  checkLike(id: number) {
+  checkLike(id: number): any {
     this.userService.checkLike(this.authService.decodedToken.nameid, id).subscribe(data => {
       return data;
     }, error => {
