@@ -73,6 +73,13 @@ export class UserService {
     return this.http.post(this.baseUrl + 'users/' + id + '/like/' + recipientId, {});
   }
 
+  sendUnlike(id: number, recipientId: number) {
+    return this.http.post(this.baseUrl + 'users/' + id + '/unlike/' + recipientId, {});
+  }
+  checkLike(id: number, recipientId: number): Observable<boolean> {
+    return this.http.post(this.baseUrl + 'users/' + id + '/checklike/' + recipientId, {}).pipe(map((response: boolean) => response));
+  }
+
   getMessages(id: number, page?, itemsPerPage?, messageContainer?) {
     const paginatedResult: PaginatedResult<Message[]> = new PaginatedResult<Message[]>();
 
