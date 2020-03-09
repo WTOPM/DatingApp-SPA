@@ -7,3 +7,7 @@ img {
     border: 2px solid white;
     display: inline;
 }
+.navbar-brand {
+    font-family: 'Rock Salt', cursive;
+    font-size: xx-large;
+}

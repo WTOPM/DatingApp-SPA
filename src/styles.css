@@ -51,3 +51,53 @@
     border-top: 1px solid #eee;
     padding: 15px 0;
   }
+  body {
+    background-color: #ff005e2e !important;
+     
+}
+a {
+  color: #e9206a;
+}
+.bg-primary {
+  background-color: #e9206a !important;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 1);
+}
+.btn-primary {
+  color: #fff;
+  background-color: #e9206a;
+  border-color: #e9206a;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #c5658d;
+  border-color: #c5658d;
+}
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show>.btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #c5658d;
+  border-color: #c5658d;
+}
+.page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  background-color: #e9206a;
+  border-color: #e9206a;
+}
+.btn-info {
+  color: #fff;
+  background-color: #8500ff;
+  border-color: #8500ff;
+}
+.tab-panel {
+  border: 1px solid #ff005e2e;
+  padding: 10px;
+  border-radius: 4px;
+  background: #ffffff;
+}
+.btn-danger {
+  color: #fff;
+  background-color: #ff0000;
+  border-color: #ff0000;
+}
