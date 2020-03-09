@@ -101,3 +101,9 @@ a {
   background-color: #ff0000;
   border-color: #ff0000;
 }
+
+.btn-primary.disabled, .btn-primary:disabled {
+  color: #fff;
+  background-color: #c5658d;
+  border-color: #c5658d;
+}
