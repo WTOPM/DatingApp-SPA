@@ -18,7 +18,7 @@ export class MemberCardComponent implements OnInit {
               private userService: UserService, private alertify: AlertifyService) { }
 
   ngOnInit() {
-    this.isLiked = this.checkLike(this.user.id);
+    this.isLiked = !this.checkLike(this.user.id);
   }
 
 
@@ -34,7 +34,7 @@ export class MemberCardComponent implements OnInit {
   sendUnlike(id: number) {
     this.isLiked = false;
     this.userService.sendUnlike(this.authService.decodedToken.nameid, id).subscribe(data => {
-      this.alertify.success('You have unliked: ' + this.user.knownAs);
+      this.alertify.error('You have unliked: ' + this.user.knownAs);
     }, error => {
       this.alertify.error(error);
     });

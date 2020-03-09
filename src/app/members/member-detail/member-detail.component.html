@@ -26,7 +26,8 @@
                 </div>
                 <div class="card-footer">
                     <div class="btn-group d-flex">
-                        <button class="btn btn-primary w-100" (click)="sendLike(user.id)">Like</button>
+                        <button *ngIf="!isLiked" class="btn btn-primary w-100" (click)="sendLike(user.id)">Like</button>
+                        <button *ngIf="isLiked" class="btn btn-primary w-100" (click)="sendUnlike(user.id)">Unlike</button>
                         <button class="btn btn-success w-100" (click)="selectTab(3)">Message</button>
                     </div>
                 </div>
@@ -49,7 +50,7 @@
                         <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
                     </tab>
                         <tab heading="Messages">
-                            <app-member-messages [recipientId]="user.id"></app-member-messages>
+                            <app-member-messages [recipientId]="user.id" [knownAs]="user.knownAs"></app-member-messages>
                         </tab>
                 </tabset>
             </div>

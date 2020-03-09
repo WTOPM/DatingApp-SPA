@@ -15,6 +15,7 @@ import { AuthService } from 'src/app/_services/auth.service';
 export class MemberDetailComponent implements OnInit {
   @ViewChild('memberTabs', {static: true}) memberTabs: TabsetComponent;
   user: User;
+  isLiked: boolean = false;
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[];
 
@@ -42,6 +43,7 @@ export class MemberDetailComponent implements OnInit {
       }
     ];
     this.galleryImages = this.getImages();
+    this.isLiked = !this.checkLike(this.user.id);
   }
 
   getImages() {
@@ -62,10 +64,28 @@ export class MemberDetailComponent implements OnInit {
   }
 
   sendLike(id: number) {
+    this.isLiked = true;
     this.userService.sendLike(this.authService.decodedToken.nameid, id).subscribe(data => {
       this.alertify.success('You have liked: ' + this.user.knownAs);
     }, error => {
       this.alertify.error(error);
+    });
+  }
+  sendUnlike(id: number) {
+    this.isLiked = false;
+    this.userService.sendUnlike(this.authService.decodedToken.nameid, id).subscribe(data => {
+      this.alertify.error('You have unliked: ' + this.user.knownAs);
+    }, error => {
+      this.alertify.error(error);
+    });
+  }
+
+  checkLike(id: number): any {
+    this.userService.checkLike(this.authService.decodedToken.nameid, id).subscribe(data => {
+      return data;
+    }, error => {
+      this.alertify.error(error);
+
     });
   }
 

@@ -4,6 +4,7 @@ import { UserService } from 'src/app/_services/user.service';
 import { AuthService } from 'src/app/_services/auth.service';
 import { AlertifyService } from 'src/app/_services/alertify.service';
 import { tap } from 'rxjs/operators';
+import { User } from 'src/app/_models/user';
 
 @Component({
   selector: 'app-member-messages',
@@ -12,6 +13,7 @@ import { tap } from 'rxjs/operators';
 })
 export class MemberMessagesComponent implements OnInit {
   @Input() recipientId: number;
+  @Input() knownAs: string;
   messages: Message[];
   newMessage: any = {};
 
