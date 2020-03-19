@@ -107,3 +107,21 @@ a {
   background-color: #c5658d;
   border-color: #c5658d;
 }
+.btn-primary:focus, .btn-primary.focus {
+  color: #fff;
+  background-color: #ff005e2e;
+  border-color: #ff005e2e;
+  box-shadow: 0 0 0 0.2rem rgba(236,110,65,0.5);
+}
+.dropdown-item.active, .dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #ff005e2e;
+}
+.member-tabset > .nav-tabs > li.active {
+  border-bottom: 4px solid #772953;
+  position: relative;
+}
+.text-primary {
+  color: #9d00ff !important;
+}
