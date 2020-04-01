@@ -76,7 +76,7 @@ export class UserService {
   sendUnlike(id: number, recipientId: number) {
     return this.http.post(this.baseUrl + 'users/' + id + '/unlike/' + recipientId, {});
   }
-  checkLike(id: number, recipientId: number) {
+  checkLike(id: number, recipientId: number): Observable<any> {
     return this.http.post(this.baseUrl + 'users/' + id + '/checklike/' + recipientId, {});
   }
 

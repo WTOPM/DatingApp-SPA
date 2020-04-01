@@ -43,7 +43,7 @@ export class MemberDetailComponent implements OnInit {
       }
     ];
     this.galleryImages = this.getImages();
-    this.isLiked = !this.checkLike(this.user.id);
+    this.checkLike(this.user.id);
   }
 
   getImages() {
@@ -82,6 +82,7 @@ export class MemberDetailComponent implements OnInit {
 
   checkLike(id: number): any {
     this.userService.checkLike(this.authService.decodedToken.nameid, id).subscribe(data => {
+      this.isLiked = data;
       return data;
     }, error => {
       this.alertify.error(error);
